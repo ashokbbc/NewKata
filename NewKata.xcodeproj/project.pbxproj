@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B59F27792D7B1401003F933C /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = B59F27782D7B13EF003F933C /* ReadMe.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		59E6B0272D7B118700DC1EC8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		59E6B0152D7B118600DC1EC8 /* NewKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E6B0262D7B118700DC1EC8 /* NewKataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewKataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E6B0302D7B118700DC1EC8 /* NewKataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewKataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59F27782D7B13EF003F933C /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		59E6B00C2D7B118600DC1EC8 = {
 			isa = PBXGroup;
 			children = (
+				B59F27782D7B13EF003F933C /* ReadMe.md */,
 				59E6B0172D7B118600DC1EC8 /* NewKata */,
 				59E6B0292D7B118700DC1EC8 /* NewKataTests */,
 				59E6B0332D7B118700DC1EC8 /* NewKataUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59F27792D7B1401003F933C /* ReadMe.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
