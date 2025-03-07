@@ -46,10 +46,22 @@ final class NewKataTests: XCTestCase {
         whenGetMaxProfitCalled()
         thenProfitReturned(5)
     }
+    
+    func test_givenWeekIsTricky_sutReturns4() {
+        givenTrickyWeek()
+        givenSUT()
+        whenGetMaxProfitCalled()
+        thenProfitReturned(4)
+    }
 
 }
 
 extension NewKataTests {
+    
+    func givenTrickyWeek() {
+        inputPrices = [7,2,5,3,6,1]
+    }
+    
     func givenBadWeek() {
         inputPrices = [7,6,4,3,1]
     }
@@ -91,22 +103,14 @@ class DefaultStockTradingObject: StockTradingObject {
     }
     
     func getMaxProfit() -> Int {
-        var maxProfit = 0
-        guard
-            let minimumVal = prices.min(),
-            let minimumValIndex = prices.firstIndex(where: { $0 == minimumVal } )
-        else {
-            return 0
+        var maxProfit = Int.min
+        var minVal = prices.first ?? 0
+        
+        for price in prices {
+            minVal = min(minVal, price)
+            maxProfit = max(maxProfit, price - minVal)
         }
         
-        for (index, price) in prices.enumerated() {
-            if index > minimumValIndex {
-                let delta = price - minimumVal
-                if delta > maxProfit {
-                    maxProfit = delta
-                }
-            }
-        }
         return maxProfit
     }
 }
